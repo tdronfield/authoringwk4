@@ -35,24 +35,22 @@ body {
 }
 
 /* arrange the puzzle pieces on the board */
-.puzzle-image:nth-child(even){
+.puzzle-image:nth-child(even) {
 	float: right;
 	clear: both;
 }
-
-.puzzle-image:nth-child(odd){
+.puzzle-image:nth-child(odd) {
 	float: left;
 	clear: both;
 }
 
-.tl, .br { text-align: right;}
-.tr img { bottom: 0;}
-.tl img { bottom: 0; right: 0;}
-.bl img { right: 0;}
+.tl, .br { text-align: right; }
+.tr img { bottom: 0; }
+.tl img { bottom: 0; right: 0; }
+.bl img { right: 0; }
 
 /* set up drop zones */
-
-.drop-zone{
+.drop-zones {
 	width: 49.5%;
 	height: 49.5%;
 	border: thin dashed white;
@@ -60,7 +58,7 @@ body {
 	position: relative;
 }
 
-.drop-zone img{
+.drop-zones img {
 	width: auto !important;
 	padding: 0 !important;
 	cursor: default;
