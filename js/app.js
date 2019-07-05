@@ -16,6 +16,18 @@
 
 	//debugger;
 
+	function resetPuzzlePieces(dropZones) {
+			console.log("reset!");
+
+			let droppedIn = document.querySelector(".drop-zones");
+			console.log(droppedIn);
+			//dropCount = document.querySelector(dropZones.childElementCount);
+			//if (dropCount !== "0") {
+			//	dropZones.remove(dropZones.children);
+			//}
+		}
+
+
 
 
 	function switchImage() {
