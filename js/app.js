@@ -16,20 +16,6 @@
 
 	//debugger;
 
-	function resetPuzzlePieces(dropZones) {
-			console.log("reset!");
-
-			let droppedIn = document.querySelector(".drop-zones");
-			console.log(droppedIn);
-			//dropCount = document.querySelector(dropZones.childElementCount);
-			//if (dropCount !== "0") {
-			//	dropZones.remove(dropZones.children);
-			//}
-		}
-
-
-
-
 	function switchImage() {
 		console.log(this);
 
@@ -55,7 +41,6 @@
 
 	// thumbnail can be changed and reset
 	puzzleSelectors.forEach(thumbnail => { thumbnail.addEventListener("click", switchImage) });
-	puzzleSelectors.forEach(thumbnail => { thumbnail.addEventListener("click", resetPuzzlePieces) });
 
 
 
