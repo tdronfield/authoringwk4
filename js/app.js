@@ -16,6 +16,20 @@
 
 	//debugger;
 
+	function resetPuzzlePieces(dropZones) {
+			console.log("reset!");
+
+			let droppedIn = document.querySelector(".drop-zones img");
+			console.log(droppedIn);
+			//dropCount = document.querySelector(dropZones.childElementCount);
+			//if (dropCount !== "0") {
+			//	dropZones.remove(dropZones.children);
+			//}
+		}
+
+
+
+
 	function switchImage() {
 		console.log(this);
 
@@ -25,6 +39,15 @@
 
 		//set bg image style on dropzone container
 		puzzleBoard.style.backgroundImage = `url(${bgImage})`;
+
+		//check for stragglers
+		dropZones.forEach(zone => {
+			if (zone.childElementCount == 1) { //if drop zone has image..
+				piece = zone.firstElementChild; //grab this piece
+				piecesBoard.appendChild(piece); //and send it back to the pieces board
+			}
+		});
+
 
   	//work on switching the right-hand images so that they match the buttons at the bottom
   	draggablePieces.forEach((image, index) => {
@@ -71,6 +94,12 @@
 
 			//console.log('u dropped sumpin on me');
 			//debugger;
+
+			//check to see if child element is present on element we're dropping on
+			//if it does the function will break with a return statement
+			//(nothing past the return line will run)
+			if (this.childElementCount == 1) {return;}
+			//(this.children.length > 0) is another way of calling the property
 
 
 
